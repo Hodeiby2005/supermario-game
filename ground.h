@@ -6,8 +6,9 @@
 class Ground : public QGraphicsPixmapItem
 {
 public:
-    Ground(QGraphicsItem *parent = nullptr);
-    QRectF boundingRect() const override;
+    explicit Ground(QGraphicsItem *parent = nullptr);
 };
 
 #endif // GROUND_H
+
+
