@@ -6,15 +6,15 @@
 class Block : public QGraphicsPixmapItem
 {
 public:
-    enum Type { Brick, Question };
+    enum BlockType { Brick, Question };
+    Block(BlockType type);
 
-    explicit Block(Type t, QGraphicsItem *parent = nullptr)
-        : QGraphicsPixmapItem(parent), type(t) {}
-
-    Type getType() const { return type; }
+    BlockType blockType() const { return m_type; }
+    void hit();
 
 private:
-    Type type;
+    BlockType m_type;
+    bool used = false;
 };
 
 #endif // BLOCK_H

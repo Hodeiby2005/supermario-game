@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/Graphics">
+        <file>background.png</file>
+        <file>block.h</file>
+        <file>brick.jpeg</file>
+        <file>castle.png</file>
+        <file>coin.png</file>
+        <file>enemy.png</file>
+        <file>ground.png</file>
+        <file>mystryblock.png</file>
+        <file>supermario.png</file>
+        <file>Mario Idle.png</file>
+        <file>walking left.png</file>
+    </qresource>
+</RCC>

@@ -140,8 +140,8 @@ void Game::setupLevel1()
     // ----- Castle (end of level) -----
     QPixmap castlePix(":/Graphics/castle.png");
     Castle *castle = new Castle();
-    castle->setPixmap(castlePix.scaled(160, 160, Qt::KeepAspectRatio, Qt::SmoothTransformation));
-    castle->setPos(2600, groundY - castle->pixmap().height());
+    castle->setPixmap(castlePix.scaled(400, 400, Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    castle->setPos(2600, groundY - castle->pixmap().height()+50);
     castle->setZValue(5);
     scene->addItem(castle);
 }

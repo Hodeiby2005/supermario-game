@@ -13,9 +13,18 @@ public:
 
 protected:
     void keyPressEvent(QKeyEvent *event) override;
+    void keyReleaseEvent(QKeyEvent *event) override;
 
 private slots:
     void updatePlayer();
+
+private:
+    bool movingLeft = false;
+    bool movingRight = false;
+    QPixmap idlePixmap;
+    QPixmap walkLeftPixmap;
+    QPixmap walkRightPixmap;
+
 
 private:
     double velocityY;
