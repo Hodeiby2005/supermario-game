@@ -82,19 +82,15 @@ void Player::handleVerticalCollisions()
         Block  *b = dynamic_cast<Block*>(item);
         if (!g && !b) continue;
 
-        QGraphicsItem *platform = (g ? static_cast<QGraphicsItem*>(g)
-                                     : static_cast<QGraphicsItem*>(b));
+        QGraphicsItem *platform = g ? static_cast<QGraphicsItem*>(g)
+                                    : static_cast<QGraphicsItem*>(b);
 
-        // Player's bottom Y
         qreal playerBottom = y() + pixmap().height();
-
-        // Platform's top Y
         qreal platformTop = platform->y();
 
-        // If falling and landing on top of ground/platform
         if (velocityY >= 0 && playerBottom >= platformTop && playerBottom <= platformTop + 20)
         {
-            setY(platformTop - pixmap().height());  // snap on top
+            setY(platformTop - pixmap().height());
             velocityY = 0;
             onGround = true;
         }
@@ -112,3 +108,5 @@ void Player::keepInBounds()
     if (x() > maxX)
         setX(maxX);
 }
+
+
