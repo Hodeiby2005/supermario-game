@@ -3,9 +3,7 @@
 Ground::Ground(QGraphicsItem *parent)
     : QGraphicsPixmapItem(parent)
 {
+    // REQUIRED: use the real pixmap collision
+    setShapeMode(QGraphicsPixmapItem::BoundingRectShape);
 }
 
-QRectF Ground::boundingRect() const
-{
-    return QGraphicsPixmapItem::boundingRect();
-}
