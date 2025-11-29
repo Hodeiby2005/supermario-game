@@ -59,28 +59,17 @@ void Game::setupLevel1()
     const int sceneHeight = static_cast<int>(scene->sceneRect().height());
 
     // load raw image and scale it to a reasonable tile size
-    QPixmap rawGround(":/Graphics/ground.jpeg");
-    QPixmap groundTile = rawGround.scaled(
-        256, 80,                      // tile width, tile height
-        Qt::IgnoreAspectRatio,
-        Qt::SmoothTransformation);
+    QPixmap rawGround(":/Graphics/ground.png");
+    QPixmap groundTile = rawGround.scaled(256, 64);
 
-    const int groundHeight = groundTile.height();    // 80
-    const int groundY      = sceneHeight - groundHeight;
+    const int groundY = scene->height() - 64;
+    int tileWidth = 256;
+    int numTiles = scene->width() / tileWidth + 3;
 
-    int tileWidth = groundTile.width();
-    int numTiles  = scene->sceneRect().width() / tileWidth + 3;
-
-    int gapStart = 12;
-    int gapEnd   = 14;
-
-    for (int i = 0; i < numTiles; ++i) {
-        if (i >= gapStart && i <= gapEnd) continue;  // leave a hole
-
+    for (int i = 0; i < numTiles; i++) {
         Ground *g = new Ground();
         g->setPixmap(groundTile);
         g->setPos(i * tileWidth, groundY);
-        g->setZValue(1);
         scene->addItem(g);
     }
 
