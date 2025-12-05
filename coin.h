@@ -1,3 +1,4 @@
+// coin.h
 #ifndef COIN_H
 #define COIN_H
 
@@ -12,7 +13,11 @@ public:
     explicit Coin(QGraphicsItem *parent = nullptr);
 
 private slots:
-    void checkCollision();
+    void tick();   // animation + collision check
+
+private:
+    double baseY;
+    int direction;
 };
 
 #endif // COIN_H
