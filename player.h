@@ -1,3 +1,4 @@
+// player.h
 #ifndef PLAYER_H
 #define PLAYER_H
 
@@ -8,8 +9,10 @@
 class Player : public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
+
 public:
     explicit Player(QGraphicsItem *parent = nullptr);
+    void stopMotion(); // Stops all player movement immediately
 
 protected:
     void keyPressEvent(QKeyEvent *event) override;
@@ -19,16 +22,16 @@ private slots:
     void updatePlayer();
 
 private:
-    bool movingLeft = false;
-    bool movingRight = false;
-    QPixmap idlePixmap;
-    QPixmap walkLeftPixmap;
-    QPixmap walkRightPixmap;
-
-
-private:
     double velocityY;
+    double velocityX; // Horizontal velocity for smooth movement
     bool onGround;
+    bool movingLeft;
+    bool movingRight;
+
+    // Animation variables (assuming these were in your original file)
+    bool facingRight;
+    bool isMoving;
+    QString lastPath;
 
     void handleVerticalCollisions();
     void keepInBounds();
