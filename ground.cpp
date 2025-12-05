@@ -1,9 +1,12 @@
+// ground.cpp
 #include "ground.h"
 
 Ground::Ground(QGraphicsItem *parent)
     : QGraphicsPixmapItem(parent)
 {
-    // REQUIRED: use the real pixmap collision
+    // Use the pixmap's rect for collisions
     setShapeMode(QGraphicsPixmapItem::BoundingRectShape);
 }
+
+
 
