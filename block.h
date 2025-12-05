@@ -1,20 +1,28 @@
+// block.h
 #ifndef BLOCK_H
 #define BLOCK_H
 
 #include <QGraphicsPixmapItem>
+#include <QObject>
 
-class Block : public QGraphicsPixmapItem
+class Block : public QObject, public QGraphicsPixmapItem
 {
+    Q_OBJECT
 public:
-    enum BlockType { Brick, Question };
-    Block(BlockType type);
+    // BlockType must be public to be accessed by Player
+    enum BlockType { Brick, Question, Used };
 
-    BlockType blockType() const { return m_type; }
+    explicit Block(BlockType t, QGraphicsItem *parent = nullptr);
+
+    // Public getters/setters needed by Player
+    BlockType getType() const;
     void hit();
 
 private:
-    BlockType m_type;
-    bool used = false;
+    BlockType type;
+
+    //... other private members ...
 };
 
 #endif // BLOCK_H
+
