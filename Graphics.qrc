@@ -1,15 +1,34 @@
 <RCC>
     <qresource prefix="/Graphics">
+        <file>enemy.png</file>
         <file>background.png</file>
-        <file>block.h</file>
         <file>brick.jpeg</file>
         <file>castle.png</file>
         <file>coin.png</file>
-        <file>enemy.png</file>
+        <file>supermario.png</file>
         <file>ground.png</file>
         <file>mystryblock.png</file>
-        <file>supermario.png</file>
-        <file>Mario Idle.png</file>
-        <file>walking left.png</file>
+        <file>flag.png</file>
+        <file>squashed_enemy.png</file>
+        <file>Mario_Idle.png</file>
+        <file>walking_left.png</file>
+        <file>small_brick.png</file>
+        <file>Background2.png</file>
+        <file>brick2.png</file>
+        <file>castle2.png</file>
+        <file>coin2.png</file>
+        <file>enemy2.png</file>
+        <file>floor2.png</file>
+        <file>mysterybox2.png</file>
+        <file>pipe2.png</file>
+        <file>goomba.png</file>
+        <file>turtleShell.png.</file>
+        <file>koopa.png.</file>
+        <file>pipeGold.png.</file>
+        <file>castle3.png.</file>
+        <file>question.png.</file>
+        <file>brick3.png.</file>
+        <file>ground3.png.</file>
+        <file>background3.png</file>
     </qresource>
 </RCC>

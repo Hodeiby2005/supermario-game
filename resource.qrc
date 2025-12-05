@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>background.png</file>
+        <file>brick.jpeg</file>
+        <file>castle.png</file>
+        <file>coin.png</file>
+        <file>enemy.png</file>
+        <file>ground.jpeg</file>
+        <file>mystryblock.png</file>
+        <file>supermario.png</file>
+    </qresource>
+</RCC>
