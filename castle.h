@@ -1,3 +1,4 @@
+// castle.h
 #ifndef CASTLE_H
 #define CASTLE_H
 
@@ -11,3 +12,4 @@ public:
 };
 
 #endif // CASTLE_H
+
